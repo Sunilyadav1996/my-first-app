@@ -32,9 +32,8 @@ loginUser(data:any):Observable<any>{
 }
 
 logoutUser():Observable<any>{
-  localStorage.setItem('token','');
-  return this.http.get<any>(this.userUrl+'logout');
-
+localStorage.setItem('token','');
+return this.http.get<any>(this.userUrl+'logout');
 }
 
 }

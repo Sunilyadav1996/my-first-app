@@ -9,9 +9,9 @@ import { SecondComponent } from './second/second.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
 import { UploadfileComponent } from './uploadfile/uploadfile.component';
+import { UserlistComponent } from './userlist/userlist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthinterceptorServiceProvider } from './auth/authinterceptor.service';
-
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { AuthinterceptorServiceProvider } from './auth/authinterceptor.service';
     SecondComponent,
     SignupComponent,
     ProfilepageComponent,
-    UploadfileComponent
+    UploadfileComponent,
+    UserlistComponent
   ],
 
   imports: [
@@ -30,7 +31,6 @@ import { AuthinterceptorServiceProvider } from './auth/authinterceptor.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  
   providers: [AuthinterceptorServiceProvider],
   bootstrap: [AppComponent]
 })

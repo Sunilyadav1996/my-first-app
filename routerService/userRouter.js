@@ -30,16 +30,14 @@ res.send(err);
 // define the about route
 router.post('/user', function (req, res) {
     let userObject = new Object();
-    userObject.username=req.body.username;
     userObject.firstname=req.body.firstName;
     userObject.lastname=req.body.lastName;
+    userObject.username=req.body.username;
     userObject.mobileNo=req.body.mobileNo;
     userObject.email=req.body.email;
+    userObject.mobileNo=req.body.mobileNo;
     userObject.password= bcrypt.hashSync(req.body.password,10);
     user = new User(userObject);
-    console.log(userObject);
-    console.log(req.body);
-    console.log(user);
     user.save().then( data=>{
     let token = jwt.sign({id:data.username},'my-secret', { expiresIn: 86400 });
      res.send({auth:true, token:token});

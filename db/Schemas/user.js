@@ -8,8 +8,7 @@ let User = new Schema({
   lastname:{type:String},
   mobileNo:{type:Number},
   email :{type:String},
-  password :{type:String},
-  
+  password :{type:String}
 });
 
 let UserModel = mongoose.model('UserModel', User );
