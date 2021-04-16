@@ -1,11 +1,10 @@
-
-    <div class="input-group">
-        <div class="input-group-prepend">
-        </div>
-        <div class="col-sm-2">
-          <input type="file" class="custom-file-input" id="inputGroupFile01">
-          <label class="custom-file-label">Choose file</label>
-        </div>
-        
-      </div>
-
+<div class="input-group mb-3">
+<div class="custom-file">
+    
+    <input type="file" class="custom-file-input"   (change)="onChange($event)">
+    <label class="custom-file-label" >{{currentInput}}</label>
+  </div>
+  <div class="input-group-append">
+    <button class="btn btn-light"  (click)="uploadFile()" type="button">Upload</button>
+  </div>
+</div>

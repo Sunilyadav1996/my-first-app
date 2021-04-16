@@ -1,0 +1,39 @@
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>SYSMBOL</th>
+            <th>OPEN</th>
+            <th>HIGH</th>
+            <th>LOW</th>
+            <th>PREV</th>
+            <th>LTP</th>
+            <th>CHNG</th>
+            <th>CHNGPER</th>
+            <th>VOLUME</th>
+            <th>VALUE</th>
+            <th>WH52</th>
+            <th>WL52</th>
+            <th>CHNG365DPER</th>
+            <th>CHNG30DPER</th>
+            <th>date</th>           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let stock of stocks"><td>{{stock.SYSMBOL}}</td>
+            <td>{{stock.OPEN}}</td>
+            <td>{{stock.HIGH}}</td>
+            <td>{{stock.LOW}}</td>
+            <td>{{stock.PREV}}</td>
+            <td>{{stock.LTP}}</td>
+            <td>{{stock.CHNG}}</td>
+            <td>{{stock.CHNGPER}}</td>
+            <td>{{stock.VOLUME}}</td>
+            <td>{{stock.VALUE}}</td>
+            <td>{{stock.WH52}}</td>
+            <td>{{stock.WL52}}</td>
+            <td>{{stock.CHNG365DPER}}</td>
+            <td>{{stock.CHNG30DPER}}</td>
+            <td>{{stock.date}}</td>                       
+        </tr>
+    </tbody>
+</table>

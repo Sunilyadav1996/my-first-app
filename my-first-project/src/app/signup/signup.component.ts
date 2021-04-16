@@ -72,8 +72,6 @@ export class SignupComponent implements OnInit {
 
     get mobileNo(){return this.signUpForm.get('mobileNo')};
   
-    get rePassword(){return this.signUpForm.get('rePassword')};
-  
-    
+    get rePassword(){return this.signUpForm.get('rePassword')};    
 
 }

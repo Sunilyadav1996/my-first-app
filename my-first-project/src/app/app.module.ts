@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
@@ -12,6 +12,7 @@ import { UploadfileComponent } from './uploadfile/uploadfile.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthinterceptorServiceProvider } from './auth/authinterceptor.service';
+import { StocklistComponent } from './stocklist/stocklist.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +23,16 @@ import { AuthinterceptorServiceProvider } from './auth/authinterceptor.service';
     SignupComponent,
     ProfilepageComponent,
     UploadfileComponent,
-    UserlistComponent
+    UserlistComponent,
+    StocklistComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [AuthinterceptorServiceProvider],
   bootstrap: [AppComponent]

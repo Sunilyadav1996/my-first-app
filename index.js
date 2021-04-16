@@ -16,7 +16,6 @@ app.use(cors());
 app.use('/uploadFile',uploadFile);
 app.use(bodyParser.json());
 
-
 app.use(express.static(__dirname + 'views'));
 app.use('/',loginRouter);
 app.use('/',userRouter);
@@ -25,8 +24,7 @@ app.post('/',function(req, res){
   console.log(req.body);
   res.send("Hello");
   });
-  
-  
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`,__dirname);
 })
