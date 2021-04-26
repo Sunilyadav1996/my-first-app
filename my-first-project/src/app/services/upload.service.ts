@@ -17,5 +17,6 @@ export class UploadService {
   public getStockList():Observable<any>{
     return this.http.get<any>(this.baseUser);
   }
+  
 
 }

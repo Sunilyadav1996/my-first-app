@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
-
 @Component({
   selector: 'app-profilepage',
   templateUrl: './profilepage.component.html',
@@ -19,6 +18,5 @@ export class ProfilepageComponent implements OnInit {
     })
 
   }
-
-
+  
 }

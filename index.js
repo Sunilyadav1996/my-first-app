@@ -8,15 +8,18 @@ let db = require('./db/mongoodb');
 let cors = require('cors');
 let loginRouter = require('./routerService/login');
 let uploadFile = require('./routerService/uploadFiles');
+let homepage = require('./routerService/homepage');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
  
 // parse application/json
+
 app.use(cors());
 app.use('/uploadFile',uploadFile);
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + 'views'));
+app.use('/',homepage)
 app.use('/',loginRouter);
 app.use('/',userRouter);
 

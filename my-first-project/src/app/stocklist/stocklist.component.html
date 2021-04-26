@@ -1,3 +1,8 @@
+
+<label for="stockDate">Select Date</label>
+<input type="date" id="stockDate">
+
+
 <table class="table table-dark">
     <thead>
         <tr>
@@ -15,11 +20,11 @@
             <th>WL52</th>
             <th>CHNG365DPER</th>
             <th>CHNG30DPER</th>
-            <th>date</th>           
+            <th>DATE</th>           
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor= "let stock of stocks"><td>{{stock.SYSMBOL}}</td>
+        <tr *ngFor= "let stock of stocks"><td><a href="#">{{stock.SYSMBOL}}</a></td>
             <td>{{stock.OPEN}}</td>
             <td>{{stock.HIGH}}</td>
             <td>{{stock.LOW}}</td>

@@ -1,62 +1,30 @@
-<header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" routerLink="#">NoExecuse</a>
-    <button class="navbar-toggle" type = "button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link" routerLink="Home">Home</a>
-         </li>         
-    <li class="nav-item">
-      <a class="nav-link" routerLink="Link">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/userlist" routerLinkActive="active">User List</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/profilepage" routerLinkActive="active">Profile</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/signup-component" routerLinkActive="active">Sign Up</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/login-component" routerLinkActive="active">Login</a>
-    </li>
-</ul>
-</div>
-</nav>
-</header>
-
-<div class = "row">
-
-<div class = "col-sm-2">
-<nav class="navbar-light bg-light">
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/uploadfile" routerLinkActive="active">Upload File</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/stocklist" routerLinkActive="active">Stock List</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link">Compnenet Three</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link">Compnenet Four</a>
-    </li>
-  </ul>
-</nav>
-</div>
-
-<div id="routingContent" class = "col-sm-6">
-    <router-outlet></router-outlet>
-</div>
-
-</div>
-
-
-<footer>This is Footer</footer>
-      
+        <header class="header">
+          <ul *ngIf="menubarStatus" id="menu-bar">
+              <li id="right-aside-icon"><a href="#">NoExcuse</a></li>
+              <li *ngFor="let menubar of menuBarList" class="menu-list"><a href="#">{{menubar.MainMenuName}}</a>
+                    <ul class="sub-menu-bar">
+                        <li *ngFor="let submenubar of menubar.SubMenuList" class="sub-menu-bar-list"><a href="#">{{submenubar.SubMenuName}}</a></li>
+                    </ul>
+               </li>
+          </ul>
+       </header>
+       <input type="checkbox" id="open-sidebar-menu">
+       <label for="open-sidebar-menu" class="sidebar-icon-toggle">
+               <div class="spinner top"></div>
+               <div class="spinner middle"></div>
+               <div class="spinner bottom"></div>
+       </label>
+       <aside id="sidebar-menu">
+           <ul class="menu">
+               <li class="sidebar-menu-list"><a href="#">Home</a></li>
+               <li class="sidebar-menu-list"><a href="#">About Us</a></li>
+               <li class="sidebar-menu-list"><a href="#">Gallery</a></li>
+               <li class="sidebar-menu-list"><a href="#">Products</a></li>
+               <li class="sidebar-menu-list"><a href="#">Contact Us</a></li>
+           </ul>
+       </aside>
+       <div class="main">
+        <div id="routingContent" class = "col-sm-6">
+          <router-outlet></router-outlet>
+      </div>         
+      </div>

@@ -1,3 +1,188 @@
-#routingContent{
-    padding: 10px 10px 10px 10px;
+*{
+    box-sizing: border-box;  
+}
+
+html, body{
+overflow-x: hidden;
+height: 100%;
+}
+
+body{
+    font-size: arial, sans-serif;
+    background-color: #fff;
+    padding: 0%;
+    margin: 0%;
+}
+
+.header{
+    background-color:black;
+    width:100%;
+    height:60px;
+    position: fixed;
+    z-index: 10;
+}
+
+.sidebar-icon-toggle{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    z-index: 20;
+    top:22px;
+    left: 15px;
+    cursor: pointer;
+}
+
+
+#right-aside-icon{
+    padding: 10px;    
+    display: inline;
+    text-transform:uppercase;
+    font-size: 18px;
+    color: white;
+    margin: 10px;
+    list-style: none;
+    float: left;
+
+}
+
+
+#menu-bar{
+    margin-top: 0px;
+    color:white;
+    background-color:black;
+    float: right;
+    width:100%;
+    display: inline;
+    text-transform:uppercase;
+    font-size: 14px;
+    
+}
+.menu-list{
+    margin: 10px;
+    display: inline;
+    float: right;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.menu-list a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sub-menu-bar{
+    background-color: black;
+    padding: 10px;
+    display: none;
+    border-radius: 10px;
+   
+}
+
+.sub-menu-bar-list{
+    margin: 5px;
+    padding: 10px;
+    list-style: none;
+    float: center; 
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.sub-menu-bar-list:hover{
+    margin: 5px;
+    padding: 10px;
+    list-style: none;
+    float: center;
+    border: 1px solid cyan;
+    border-radius: 5px;
+}
+
+.menu-list:hover .sub-menu-bar{
+    display: block;
+    position: absolute;
+}
+
+
+.main{
+    height: 100%;
+    margin-top: 60px;
+    padding: 10px 50px;
+}
+
+#sidebar-menu{
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 250px;
+    margin-top:40px;
+    background-color: black;
+    transform: translateX(-250px);
+    transition: 250ms ease-in-out;
+}
+
+
+#open-sidebar-menu:checked ~ #sidebar-menu{
+ transform: translateX(0px);    
+}
+
+
+.menu{
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+.sidebar-menu-list{
+    color: #fff;
+    border:1px solid black;
+}
+
+.sidebar-menu-list:hover{
+    color: #fff;
+    border:1px solid cyan;
+    border-radius: 5px;
+    
+}
+
+.sidebar-menu-list a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.spinner{
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.spinner.middle, 
+.spinner.bottom{
+    margin-top: 3px;
+}
+
+#open-sidebar-menu:checked ~ .sidebar-icon-toggle > .spinner.spinner.middle{
+    opacity: 0;  
+   }
+   
+#open-sidebar-menu:checked ~ .sidebar-icon-toggle > .spinner.top{
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+#open-sidebar-menu:checked ~ .sidebar-icon-toggle > .spinner.bottom{
+    transform: rotate(-135deg);
+    margin-top: -9px;
 }
